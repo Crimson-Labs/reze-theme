@@ -12,6 +12,8 @@
 @import url('https://raw.githubusercontent.com/Crimson-Labs/reze-theme/main/midnight.css');
 
 body {
+    --reze-bg-primary: url('https://cdn.jsdelivr.net/gh/Crimson-Labs/reze-theme@main/reze-bg.png');
+    --reze-bg-fallback: url('https://raw.githubusercontent.com/Crimson-Labs/reze-theme/main/reze-bg.png');
     /* font options */
     --font: 'figtree';
     --code-font: '';
@@ -51,7 +53,7 @@ body {
 
     /* background image options */
     --background-image: on;
-    --background-image-url: url('https://raw.githubusercontent.com/Crimson-Labs/reze-theme/main/reze-bg.png');
+    --background-image-url: var(--reze-bg-primary);
 
     /* transparency/blur options */
     --transparency-tweaks: on;
@@ -147,17 +149,28 @@ body {
 }
 
 /* stronger non-glass translucency so the PNG background is visible */
-.appMount__51fd7,
-.bg__960e4 {
-    background: transparent !important;
-}
-
 html,
 body,
 #app-mount,
-.appMount__51fd7,
-.bg__960e4 {
-    background-image: url('https://raw.githubusercontent.com/Crimson-Labs/reze-theme/main/reze-bg.png') !important;
+[class*='appMount_'],
+[class*='bg_'],
+[class*='layers_'],
+[class*='layer_'] {
+    background: transparent !important;
+}
+
+#app-mount {
+    position: relative;
+    isolation: isolate;
+}
+
+#app-mount::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-image: var(--reze-bg-primary), var(--reze-bg-fallback) !important;
     background-size: cover !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
@@ -169,7 +182,9 @@ div[class*='chat_'],
 main[class*='chatContent_'],
 div[class*='container_'][class*='themed_'],
 div[class*='membersWrap_'],
-section[class*='panels_'] {
-    background-color: hsla(266, 20%, 8%, 0.56) !important;
+section[class*='panels_'],
+aside[class*='members_'],
+nav[class*='guilds_'] {
+    background-color: hsla(266, 20%, 8%, 0.52) !important;
     backdrop-filter: none !important;
 }
