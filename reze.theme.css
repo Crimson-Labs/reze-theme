@@ -55,7 +55,7 @@ body {
 
     /* transparency/blur options */
     --transparency-tweaks: on;
-    --remove-bg-layer: off;
+    --remove-bg-layer: on;
     --panel-blur: off;
     --blur-amount: 0px;
     --bg-floating: var(--bg-3);
@@ -80,10 +80,10 @@ body {
     --text-5: hsl(266, 10%, 36%);
 
     /* background and dark colors (slightly transparent for better background visibility) */
-    --bg-1: hsla(266, 24%, 17%, 0.92);
-    --bg-2: hsla(266, 22%, 12%, 0.88);
-    --bg-3: hsla(266, 20%, 8%, 0.84);
-    --bg-4: hsla(266, 18%, 5%, 0.8);
+    --bg-1: hsla(266, 24%, 17%, 0.74);
+    --bg-2: hsla(266, 22%, 12%, 0.66);
+    --bg-3: hsla(266, 20%, 8%, 0.58);
+    --bg-4: hsla(266, 18%, 5%, 0.5);
     --hover: hsla(269, 86%, 72%, 0.16);
     --active: hsla(269, 86%, 72%, 0.26);
     --active-2: hsla(269, 86%, 72%, 0.36);
@@ -144,4 +144,20 @@ body {
     --yellow-3: oklch(70% 0.11 90);
     --yellow-4: oklch(65% 0.11 90);
     --yellow-5: oklch(60% 0.11 90);
+}
+
+/* stronger non-glass translucency so the PNG background is visible */
+.appMount__51fd7,
+.bg__960e4 {
+    background: transparent !important;
+}
+
+div[class*='sidebar_'],
+div[class*='chat_'],
+main[class*='chatContent_'],
+div[class*='container_'][class*='themed_'],
+div[class*='membersWrap_'],
+section[class*='panels_'] {
+    background-color: hsla(266, 20%, 8%, 0.56) !important;
+    backdrop-filter: none !important;
 }
