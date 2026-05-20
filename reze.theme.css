@@ -54,7 +54,7 @@ body {
     --background-image-url: url('https://raw.githubusercontent.com/Crimson-Labs/reze-theme/main/reze-bg.png');
 
     /* transparency/blur options */
-    --transparency-tweaks: off;
+    --transparency-tweaks: on;
     --remove-bg-layer: off;
     --panel-blur: off;
     --blur-amount: 0px;
@@ -79,11 +79,11 @@ body {
     --text-4: hsl(266, 12%, 52%);
     --text-5: hsl(266, 10%, 36%);
 
-    /* background and dark colors (opaque for clarity) */
-    --bg-1: hsla(266, 24%, 17%, 1);
-    --bg-2: hsla(266, 22%, 12%, 1);
-    --bg-3: hsla(266, 20%, 8%, 1);
-    --bg-4: hsla(266, 18%, 5%, 1);
+    /* background and dark colors (slightly transparent for better background visibility) */
+    --bg-1: hsla(266, 24%, 17%, 0.92);
+    --bg-2: hsla(266, 22%, 12%, 0.88);
+    --bg-3: hsla(266, 20%, 8%, 0.84);
+    --bg-4: hsla(266, 18%, 5%, 0.8);
     --hover: hsla(269, 86%, 72%, 0.16);
     --active: hsla(269, 86%, 72%, 0.26);
     --active-2: hsla(269, 86%, 72%, 0.36);
