@@ -55,7 +55,7 @@ body {
 
     /* transparency/blur options */
     --transparency-tweaks: on;
-    --remove-bg-layer: on;
+    --remove-bg-layer: off;
     --panel-blur: off;
     --blur-amount: 0px;
     --bg-floating: var(--bg-3);
@@ -150,6 +150,18 @@ body {
 .appMount__51fd7,
 .bg__960e4 {
     background: transparent !important;
+}
+
+html,
+body,
+#app-mount,
+.appMount__51fd7,
+.bg__960e4 {
+    background-image: url('https://raw.githubusercontent.com/Crimson-Labs/reze-theme/main/reze-bg.png') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
 }
 
 div[class*='sidebar_'],
