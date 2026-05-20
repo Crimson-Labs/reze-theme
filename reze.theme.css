@@ -12,8 +12,8 @@
 @import url('https://raw.githubusercontent.com/Crimson-Labs/reze-theme/main/midnight.css');
 
 body {
-    --reze-bg-primary: url('https://cdn.jsdelivr.net/gh/Crimson-Labs/reze-theme@main/reze-bg.png');
-    --reze-bg-fallback: url('https://raw.githubusercontent.com/Crimson-Labs/reze-theme/main/reze-bg.png');
+    --reze-bg-primary: url('https://raw.githubusercontent.com/Crimson-Labs/reze-theme/refs/heads/main/reze-bg.png');
+    --reze-bg-fallback: url('https://raw.githubusercontent.com/Crimson-Labs/reze-theme/refs/heads/main/reze-bg.png');
     /* font options */
     --font: 'figtree';
     --code-font: '';
